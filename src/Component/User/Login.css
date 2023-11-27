@@ -1,0 +1,9 @@
+.input-div{
+    display: flex; 
+    align-items: center;
+}
+.log-inp{
+    border-radius: 20px;
+    background-color:rgb(255, 245, 245);
+    padding: 30px 0px;
+}
