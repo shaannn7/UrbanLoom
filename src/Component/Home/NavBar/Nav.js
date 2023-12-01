@@ -51,11 +51,13 @@ function NavBar({ Logout, Loguser , ifLogin , searchpro ,setsearch}) {
                     <Dropdown.Item style={{ backgroundColor: 'inherit' }}><Link className='NavPages' to={'/Seating'}><h5>Seating</h5></Link></Dropdown.Item>
                     <Dropdown.Item style={{ backgroundColor: 'inherit' }}><Link className='NavPages' to={'/Bedroom'}><h5>Bedroom</h5></Link></Dropdown.Item>
                     <Dropdown.Item style={{ backgroundColor: 'inherit' }}><Link className='NavPages' to={'/Dinning'}><h5>Dinning</h5></Link></Dropdown.Item>
-                    <Dropdown.Item style={{ backgroundColor: 'inherit' }}><Link className='NavPages' to={'/Entertainment'}><h5>Entertainment</h5></Link></Dropdown.Item>
                     <Dropdown.Item style={{ backgroundColor: 'inherit' }}><Link className='NavPages' to={'/Kids'}><h5>Kids</h5></Link></Dropdown.Item>
                     <Dropdown.Item style={{ backgroundColor: 'inherit' }}><Link className='NavPages' to={'/Office'}><h5>Office</h5></Link></Dropdown.Item>
                     <Dropdown.Item style={{ backgroundColor: 'inherit' }}><Link className='NavPages' to={'/Outdoor'}><h5>Outdoor</h5></Link></Dropdown.Item>
                     <Dropdown.Item style={{ backgroundColor: 'inherit' }}><Link className='NavPages' to={'/Storage'}><h5>Storage</h5></Link></Dropdown.Item>
+                    <Dropdown.Item style={{ backgroundColor: 'inherit' }}><Link className='NavPages' to={'/Lights'}><h5>Lights</h5></Link></Dropdown.Item>  
+                    <Dropdown.Item style={{ backgroundColor: 'inherit' }}><Link className='NavPages' to={'/Mirrors'}><h5>Mirrors</h5></Link></Dropdown.Item> 
+                    <Dropdown.Item style={{ backgroundColor: 'inherit' }}><Link className='NavPages' to={'/Couches'}><h5>Couches</h5></Link></Dropdown.Item>               
                   </DropdownButton>
                 </div>
 

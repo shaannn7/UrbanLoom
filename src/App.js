@@ -4,7 +4,7 @@ import { Route, Routes, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './Component/User/Login';
 import Home from './Component/Home/Home';
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 import Shop from './Component/Home/Shop/Shop';
 import { Items } from './Component/Items';
 import Cart from './Component/Home/Cart/Cart';
@@ -13,21 +13,37 @@ import { validateCpassword, validateEmail, validateMnumber, validateName, valida
 import NavBar from './Component/Home/NavBar/Nav';
 import Bedroom from './Component/Home/Shop/Catgrs/Bedroom';
 import Dinning from './Component/Home/Shop/Catgrs/Dinning';
-import Entertainment from './Component/Home/Shop/Catgrs/Entertainment';
 import Kids from './Component/Home/Shop/Catgrs/Kids';
 import Office from './Component/Home/Shop/Catgrs/Office';
 import Outdoor from './Component/Home/Shop/Catgrs/Outdoor';
 import Seating from './Component/Home/Shop/Catgrs/Seating';
 import Storage from './Component/Home/Shop/Catgrs/Storage';
+import Lights from './Component/Home/Shop/Catgrs/Lights';
+import Couches from './Component/Home/Shop/Catgrs/Couches';
+import Mirrors from './Component/Home/Shop/Catgrs/Mirrors';
 import Viewproduct from './Component/Home/Shop/Viewproduct';
 import Search from './Component/Home/Search/Search';
+import Admin from './Component/User/Admin/Admin';
+import Products from './Component/User/Admin/Products/Products';
+import Users from './Component/User/Admin/users/Users';
+import Productview from './Component/User/Admin/Products/Productview';
+import Viewbedroom from './Component/User/Admin/Products/ViewCatgr/Viewbedroom';
+import Viewdinning from './Component/User/Admin/Products/ViewCatgr/Viewdinning';
+import Viewkids from './Component/User/Admin/Products/ViewCatgr/Viewkids';
+import Viewoffice from './Component/User/Admin/Products/ViewCatgr/Viewoffice';
+import Viewoutdoor from './Component/User/Admin/Products/ViewCatgr/Viewoutdoor';
+import Viewseating from './Component/User/Admin/Products/ViewCatgr/Viewseating';
+import Viewstorage from './Component/User/Admin/Products/ViewCatgr/Viewstorage';
+import Viewcouches from './Component/User/Admin/Products/ViewCatgr/Viewcouches';
+import Viewlights from './Component/User/Admin/Products/ViewCatgr/Viewlights';
+import Viewmirrors from './Component/User/Admin/Products/ViewCatgr/Viewmirrors';
+import Addproduct from './Component/User/Admin/Products/Addproduct';
+import Viewusers from './Component/User/Admin/users/Viewusers';
 
 
 
 
-
-
-
+export const Mycontext = createContext()
 
 
 
@@ -35,15 +51,15 @@ import Search from './Component/Home/Search/Search';
 function App() {
 
 
-
-
+  const [adminlogin , setadminlogin] = useState(false)
   const nav = useNavigate()
+  
 
 
-
+     // Signup //
 
   const [valUser, setvalUser] = useState([
-    {}
+    {email:"admin27@gmail.com", password:"admin@27",previlage:"admin"}
   ])
   const validateUser = (name, email, mnumber, password, cpassword) => {
     const findUser = valUser.find((x) => x.email === email && x.mnumber === mnumber)
@@ -51,24 +67,37 @@ function App() {
       if (validateName(name) && validateEmail(email) && validateMnumber(mnumber) && validatePassword(password) && validateCpassword(cpassword, password)) {
         setvalUser([
           ...valUser,
-          { name: name, email: email, mnumber: mnumber, password: password }
+          { name: name, email: email, mnumber: mnumber, password: password , previlage:"user" , Id:valUser.length}
         ])
         nav('/login')
       }
     }
-    else {
-      alert("Register your account!!!!!!!")
+    else if(findUser){
+      alert("User already exists!!!!!!!")
+    }
+    else{
+      alert("Register your account")
     }
   }
 
 
 
 
+    // Login //
+               
+
 
   const [ifLogin, setifLogin] = useState(false)
-  const [loguser, setloguser] = useState({})
+
+  const [loguser, setloguser] = useState({ cart : []})
   const Loguser = (email, password) => {
     const findUser = valUser.find((x) => x.email === email && x.password === password)
+    const findadmin = valUser.find((x) => x.email === email && x.password === password && x.previlage === "admin")
+    if(findadmin){
+      setadminlogin(true)
+      nav('/Admin')
+      return true;
+    }
     if (findUser && validateEmail(email) && validatePassword(password)) {
       setloguser({ email: email, password: password, name: findUser.name })
       setCart(findUser.cart || [])
@@ -83,16 +112,23 @@ function App() {
 
 
 
-  const [search , setsearch]=useState(" ") 
-  const [searchresult , setsearchresult]=useState([{}])
-  const searchpro = ()=>{
-    const Searchproduct = item.filter((items)=>items.ProductName.toLowerCase().includes(search.toLowerCase()))
+   // search //
+         
+
+
+
+  const [search, setsearch] = useState(" ")
+  const [searchresult, setsearchresult] = useState([{}])
+  const searchpro = () => {
+    const Searchproduct = item.filter((items) => items.ProductName.toLowerCase().includes(search.toLowerCase()))
     setsearchresult(Searchproduct)
     nav('/Search')
-}
-console.log(searchresult)
+  }
 
 
+
+
+  // Cart //
 
   const [show, setShow] = useState(false);
   const handleShow = () => {
@@ -100,9 +136,9 @@ console.log(searchresult)
       setShow(true);
     }
   }
-
-
   const handleClose = () => setShow(false);
+
+
   const [cart, setCart] = useState([])
   const [item, setItem] = useState(Items)
   const Addcart = (id) => {
@@ -115,10 +151,7 @@ console.log(searchresult)
           setCart(UpdateCart)
         }
         else {
-          setCart([...cart, {
-            ...Finditem,
-            Qty: 1,
-            Total: ((Finditem.Qty) * (Finditem.Price))
+          setCart([...cart, {...Finditem,Qty: 1,Total: ((Finditem.Qty) * (Finditem.Price))
           }])
         }
       }
@@ -130,17 +163,19 @@ console.log(searchresult)
 
 
 
-
+  
+  //  Cart total Bill //
 
 
   let tot = 0;
   const findUser = valUser.find((item) => item.email === loguser.email)
-  if (findUser.cart || []) {
+  if (findUser && findUser.cart) {
     tot = cart.reduce((Tot, item) => item.Total + Tot, 0)
   }
 
 
 
+  //  Buyitem //
 
   const [buyitem, setbuyitem] = useState([{}])
   const Buynow = (id) => {
@@ -160,9 +195,15 @@ console.log(searchresult)
       nav('/Login')
     }
   }
+  
 
+  //  Buyitem.Bill //
+   
   const buytot = buyitem.reduce((tot, item) => item.Total + tot, 0)
 
+
+
+  //  Logout //
 
 
   const Logout = () => {
@@ -180,25 +221,45 @@ console.log(searchresult)
 
   return (
     <div className="App">
-      <NavBar Logout={Logout} Loguser={loguser} ifLogin={ifLogin} Items={Items} searchpro={searchpro} setsearch={setsearch}/>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path="/register" element={<Register validateUser={validateUser} />}></Route>
-        <Route path="/login" element={<Login Loguser={Loguser} />}></Route>
-        <Route path='/Shop' element={<Shop Addcart={Addcart} nav={nav} />} />
-        <Route path='/Cart' element={<Cart cart={cart} setCart={setCart} tot={tot} ifLogin={ifLogin} Loguser={loguser} Buynow={Buynow} />} />
-        <Route path='/Payment' element={<Payment cart={cart} tot={tot} Buynow={Buynow} buyitem={buyitem} buytot={buytot}  />} />
-        <Route path='/Bedroom' element={<Bedroom Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />} />
-        <Route path='/Dinning' element={<Dinning Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />} />
-        <Route path='/Entertainment' element={<Entertainment Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />} />
-        <Route path='/Kids' element={<Kids Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />} />
-        <Route path='/Office' element={<Office Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />} />
-        <Route path='/Outdoor' element={<Outdoor Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />} />
-        <Route path='/Seating' element={<Seating Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />} />
-        <Route path='/Storage' element={<Storage Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />} />
-        <Route path='/Viewproduct/:Id' element={<Viewproduct Items={Items} Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} Buynow={Buynow} />} />
-        <Route path='/Search' element={<Search searchresult={searchresult} />} />
-      </Routes>
+      <Mycontext.Provider value={{item , setItem , adminlogin}}>
+        <NavBar Logout={Logout} Loguser={loguser} ifLogin={ifLogin} searchpro={searchpro} setsearch={setsearch} />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path="/register" element={<Register validateUser={validateUser} />}></Route>
+          <Route path="/login" element={<Login Loguser={Loguser} />}></Route>
+          <Route path='/Shop' element={<Shop Addcart={Addcart} nav={nav} />} />
+          <Route path='/Cart' element={<Cart cart={cart} setCart={setCart} tot={tot} ifLogin={ifLogin} Loguser={loguser} Buynow={Buynow} />} />
+          <Route path='/Payment' element={<Payment Loguser={loguser} cart={cart} tot={tot} Buynow={Buynow} buyitem={buyitem} buytot={buytot} valUser={valUser} setvalUser={setvalUser} />} />
+          <Route path='/Bedroom' element={<Bedroom Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />} />
+          <Route path='/Dinning' element={<Dinning Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />} />          
+          <Route path='/Kids' element={<Kids Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />} />
+          <Route path='/Office' element={<Office Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />} />
+          <Route path='/Outdoor' element={<Outdoor Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />} />
+          <Route path='/Seating' element={<Seating Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />} />
+          <Route path='/Lights' element={<Lights  Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />}/>
+          <Route path='/Mirrors' element={<Mirrors Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />} />
+          <Route path='/Couches' element={<Couches Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav}/>} />
+          <Route path='/Storage' element={<Storage Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} nav={nav} />} />
+          <Route path='/Viewproduct/:Id' element={<Viewproduct Items={Items} Addcart={Addcart} handleShow={handleShow} handleClose={handleClose} show={show} Loguser={loguser} Buynow={Buynow} />} />
+          <Route path='/Search' element={<Search searchresult={searchresult} />} />
+          <Route path='/Admin' element={<Admin />} />
+          <Route path='/Products' element={<Products nav={nav} />} />
+          <Route path='/Productview/:Id' element={<Productview nav={nav}/>} />
+          <Route path='/Viewbedroom' element={<Viewbedroom nav={nav} />} />
+          <Route path='/Viewdinning' element={<Viewdinning nav={nav} />} />
+          <Route path='/Viewcouches' element={<Viewcouches nav={nav} />} />
+          <Route path='/Viewlights' element={<Viewlights  nav={nav}/>} />
+          <Route path='/Viewmirrors' element={<Viewmirrors  nav={nav}/>} />
+          <Route path='/Viewkids' element={<Viewkids nav={nav} />} />
+          <Route path='/Viewoffice' element={<Viewoffice nav={nav} />} />
+          <Route path='/Viewoutdoor' element={<Viewoutdoor nav={nav} />} />
+          <Route path='/Viewseating' element={<Viewseating nav={nav} />} />
+          <Route path='/Viewstorage' element={<Viewstorage nav={nav} />} />
+          <Route path='/Users' element={<Users  nav={nav} valUser={valUser}/>} />
+          <Route path='/Viewusers/:Id' element={<Viewusers valUser={valUser} setvalUser={setvalUser} loguser={loguser} buyitem={buyitem} findUser={findUser}/>} />
+          <Route path='/Addproduct' element={<Addproduct setItem={setItem} item={item} nav={nav}/>}/>
+        </Routes>
+      </Mycontext.Provider>
     </div>
   );
 }

@@ -5,17 +5,17 @@ import { Button } from 'react-bootstrap';
 import { Mycontext } from '../../../../App';
 
 
-const Kids = ({ nav }) => {
+const Couches = ({ nav }) => {
     const {item , setItem} = useContext(Mycontext)
-    const KidstItems = item.filter((item) => item.type === 'Kids');
+    const Couchitems = item.filter((item) => item.type === 'Couches');
 
 return (
         <div>
-            <h3 style={{ color: "silver" }}>KIDS</h3>
+            <h3 style={{ color: "silver" }}>COUCHES</h3>
             <div className='container'>
                 <div className='row'>
                     {
-                        KidstItems.map((item) => (
+                        Couchitems.map((item) => (
                             <CardGroup className='col-6 col-md-3'>
                                 <Card className='m-2 mt-4 md-3'>
                                     <Card.Img style={{ maxHeight: "12rem" }} src={item.Image} />
@@ -35,4 +35,4 @@ return (
     )
 }
 
-export default Kids
+export default Couches

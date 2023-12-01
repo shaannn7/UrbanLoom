@@ -1,14 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
-import { Items } from '../../../Items';
 import { Button } from 'react-bootstrap';
-import Modal from 'react-bootstrap/Modal';
-
+import { Mycontext } from '../../../../App';
 
 const Dinning = ({ nav }) => {
-    const [items, setItems] = useState(Items)
-    const DinninghallItems = items.filter((item) => item.type === 'Dinning' ||  item.type === 'Light');
+    const {item , setItem} = useContext(Mycontext)
+    const DinninghallItems = item.filter((item) => item.type === 'Dinning');
 return (
         <div>
             <h3 style={{ color: "silver" }}>DINNING</h3>

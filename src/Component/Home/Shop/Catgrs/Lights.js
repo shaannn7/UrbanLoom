@@ -1,28 +1,29 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
-import { Items } from '../../../Items';
 import { Button } from 'react-bootstrap';
-import Modal from 'react-bootstrap/Modal';
+import { Mycontext } from '../../../../App';
 
-const Entertainment = ({ nav }) => {
-    const [items, setItems] = useState(Items)
-    const EntertainmentItems = items.filter((item) => item.type === 'Sofa' ||  item.type === 'Light');
+
+const Lights = ({ nav }) => {
+    const {item , setItem} = useContext(Mycontext)
+    const Lightitems = item.filter((item) => item.type === 'Lights');
 
 return (
         <div>
-            <h3 style={{ color: "silver" }}>ENTERTAINMENT</h3>
+            <h3 style={{ color: "silver" }}>LIGHTS</h3>
             <div className='container'>
                 <div className='row'>
                     {
-                        EntertainmentItems.map((item) => (
+                        Lightitems.map((item) => (
                             <CardGroup className='col-6 col-md-3'>
                                 <Card className='m-2 mt-4 md-3'>
                                     <Card.Img style={{ maxHeight: "12rem" }} src={item.Image} />
                                     <Card.Body>
                                         <Card.Text>{item.ProductName}</Card.Text>
                                         <Card.Text>Price:{item.Price}₹</Card.Text>
-                                        <Button variant='secondary' style={{margin:"2px"}} onClick={() => nav(`/Viewproduct/${item.Id}`)}>View Product</Button>                                    </Card.Body>
+                                        <Button variant='secondary' style={{margin:"2px"}} onClick={() => nav(`/Viewproduct/${item.Id}`)}>View Product</Button>
+                                    </Card.Body>
                                 </Card>
                             </CardGroup>
 
@@ -34,4 +35,4 @@ return (
     )
 }
 
-export default Entertainment
+export default Lights

@@ -6,7 +6,7 @@ export const Items=[
           Price: "19000",
           Image:
             "https://i.pinimg.com/564x/bc/c9/6f/bcc96feeb91b3927a6f2e1bc5455375d.jpg",
-          type: "bedroom",
+          type: "Bedroom",
           Qty: 1,
           Stock: 10,
         },
@@ -17,7 +17,7 @@ export const Items=[
           Price: "19999",
           Image:
             "https://i.pinimg.com/474x/11/36/fe/1136fed56e33d92d9ff4fa7e5bc14a26.jpg",
-          type: "bedroom",
+          type: "Bedroom",
           Qty: 1,
           Stock: 10,
         },
@@ -28,7 +28,7 @@ export const Items=[
           Price: "16000",
           Image:
             "https://i.pinimg.com/564x/cf/72/4e/cf724e4c0997e67faa28ecc1f5061e4f.jpg",
-          type: "bedroom",
+          type: "Bedroom",
           Qty: 1,
           Stock: 10,
         },
@@ -39,7 +39,7 @@ export const Items=[
           Price: "12000",
           Image:
             "https://i.pinimg.com/564x/28/44/cd/2844cdc4f01dffcb781862de61d75c54.jpg",
-          type: "bedroom",
+          type: "Bedroom",
           Qty: 1,
           Stock: 10,
         },
@@ -50,7 +50,7 @@ export const Items=[
           Price: "20000",
           Image:
             "https://i.pinimg.com/564x/11/5b/95/115b95dd548c90b5c4a585c774f81b03.jpg",
-          type: "bedroom",
+          type: "Bedroom",
           Qty: 1,
           Stock: 10,
         },
@@ -61,7 +61,7 @@ export const Items=[
           Price: "22000",
           Image:
             "https://i.pinimg.com/564x/5a/a7/b0/5aa7b05f89c519ff6ae4f74aeeb3ce30.jpg",
-          type: "bedroom",
+          type: "Bedroom",
           Qty: 1,
           Stock: 10,
         },
@@ -72,7 +72,7 @@ export const Items=[
           Price: "21000",
           Image:
             "https://i.pinimg.com/564x/dd/92/9c/dd929c025d83086857a5b1c0b9cbf915.jpg",
-          type: "bedroom",
+          type: "Bedroom",
           Qty: 1,
           Stock: 10,
         },
@@ -83,7 +83,7 @@ export const Items=[
           Price: "16000",
           Image:
             "https://i.pinimg.com/564x/ac/dd/a9/acdda98dac8ec972e5820fe49cd60a95.jpg",
-          type: "bedroom",
+          type: "Bedroom",
           Qty: 1,
           Stock: 10,
         },
@@ -94,7 +94,7 @@ export const Items=[
           Price: "30000",
           Image:
             "https://i.pinimg.com/564x/ad/b5/6d/adb56d85a2f3d70b8076825b7bdc275a.jpg",
-          type: "bedroom",
+          type: "Bedroom",
           Qty: 1,
           Stock: 10,
         },
@@ -105,7 +105,7 @@ export const Items=[
           Price: "28000",
           Image:
             "https://i.pinimg.com/564x/0e/88/89/0e8889234540bed1cd95bd4936cba677.jpg",
-          type: "bedroom",
+          type: "Bedroom",
           Qty: 1,
           Stock: 10,
         },
@@ -116,7 +116,7 @@ export const Items=[
           Price: "24000",
           Image:
             "https://i.pinimg.com/564x/23/cd/ba/23cdba51cfee9ada5fb0a2e66fe4a466.jpg",
-          type: "bedroom",
+          type: "Bedroom",
           Qty: 1,
         },
       
@@ -126,7 +126,7 @@ export const Items=[
           Price: "3500",
           Image:
             "https://i.pinimg.com/564x/e0/7f/96/e07f961434550c10e5d7a1e5ddad488a.jpg",
-          type: "bedroom",
+          type: "Lights",
           Qty: 1,
           Stock: 10,
         },
@@ -137,7 +137,7 @@ export const Items=[
           Price: "2600",
           Image:
             "https://i.pinimg.com/564x/fb/0a/78/fb0a78249f59a99d77f0611753784738.jpg",
-          type: "bedroom",
+          type: "Lights",
           Qty: 1,
           Stock: 10,
         },
@@ -148,7 +148,7 @@ export const Items=[
           Price: "1700",
           Image:
             "https://i.pinimg.com/564x/9f/48/11/9f4811a34d38227441b23036cbd2e468.jpg",
-          type: "bedroom",
+          type: "Lights",
           Qty: 1,
           Stock: 10,
         },
@@ -159,7 +159,7 @@ export const Items=[
           Price: "2200",
           Image:
             "https://i.pinimg.com/564x/97/e4/7c/97e47c6f38450171795bc0a394b2f4d4.jpg",
-          type: "bedroom",
+          type: "Lights",
           Qty: 1,
           Stock: 10,
         },
@@ -170,7 +170,7 @@ export const Items=[
           Price: "1100",
           Image:
             "https://i.pinimg.com/564x/e4/8f/b2/e48fb2d0ccb4a942d14858878525a6b0.jpg",
-          type: "bedroom",
+          type: "Lights",
           Qty: 1,
           Stock: 10,
         },
@@ -181,7 +181,7 @@ export const Items=[
           Price: "2300",
           Image:
             "https://i.pinimg.com/564x/30/58/a3/3058a3074a0a0aafaa8581949d2bd81a.jpg",
-          type: "bedroom",
+          type: "Lights",
           Qty: 1,
           Stock: 10,
         },
@@ -192,7 +192,7 @@ export const Items=[
           Price: "2000",
           Image:
             "https://i.pinimg.com/564x/0e/02/3c/0e023c4171537759a76ccb575caa1c05.jpg",
-          type: "bedroom",
+          type: "Mirrors",
           Qty: 1,
           Stock: 10,
         },
@@ -203,7 +203,7 @@ export const Items=[
           Price: "2900",
           Image:
             "https://i.pinimg.com/736x/c2/8f/4b/c28f4b8f7013d8ca315c160dbbb571ac.jpg",
-          type: "bedroom",
+          type: "Mirrors",
           Qty: 1,
           Stock: 10,
         },
@@ -214,7 +214,7 @@ export const Items=[
           Price: "1900",
           Image:
             "https://i.pinimg.com/564x/56/c2/7b/56c27b3f6dcdb46c7509a6652ce60003.jpg",
-          type: "bedroom",
+          type: "Mirrors",
           Qty: 1,
           Stock: 10,
         },
@@ -225,7 +225,7 @@ export const Items=[
           Price: "1800",
           Image:
             "https://i.pinimg.com/564x/d4/d1/01/d4d10151fb2b6df9a5113be805f7c6ab.jpg",
-          type: "bedroom",
+          type: "Mirrors",
           Qty: 1,
           Stock: 10,
         },
@@ -235,7 +235,7 @@ export const Items=[
           Price: "1800",
           Image:
             "https://i.pinimg.com/564x/71/f8/e7/71f8e76ac4cf8c0d064595dd7841b3d4.jpg",
-          type: "bedroom",
+          type: "Mirrors",
           Qty: 1,
           Stock: 10,
         },
@@ -380,7 +380,7 @@ export const Items=[
           Price: "12000",
           Image:
             "https://i.pinimg.com/564x/e9/2d/74/e92d7459415ffa8fab88c9b8af1fb185.jpg",
-          type: "office",
+          type: "Office",
           Qty: 1,
           Stock: 10,
         },
@@ -391,7 +391,7 @@ export const Items=[
           Price: "20000",
           Image:
             "https://i.pinimg.com/564x/9b/a3/7c/9ba37cd5281e3ce219b83a7436a886ee.jpg",
-          type: "office",
+          type: "Office",
           Qty: 1,
           Stock: 10,
         },
@@ -402,7 +402,7 @@ export const Items=[
           Price: "22000",
           Image:
             "https://i.pinimg.com/564x/67/3a/61/673a61905229eacafda2f56bbe8bca74.jpg",
-          type: "office",
+          type: "Office",
           Qty: 1,
           Stock: 10,
         },
@@ -413,7 +413,7 @@ export const Items=[
           Price: "21000",
           Image:
             "https://i.pinimg.com/564x/ea/a7/3b/eaa73b2f4e3225acd3b092633f1faa5c.jpg",
-          type: "office",
+          type: "Office",
           Qty: 1,
           Stock: 10,
         },
@@ -424,7 +424,7 @@ export const Items=[
           Price: "16000",
           Image:
             "https://i.pinimg.com/564x/3f/82/bd/3f82bd6afec13a373066edf671688a16.jpg",
-          type: "office",
+          type: "Office",
           Qty: 1,
           Stock: 10,
         },
@@ -435,7 +435,7 @@ export const Items=[
           Price: "30000",
           Image:
             "https://i.pinimg.com/564x/e1/3d/61/e13d61eb53f193f76c3efb01d20bf84b.jpg",
-          type: "children ",
+          type: "Kids ",
           Qty: 1,
           Stock: 10,
         },
@@ -446,7 +446,7 @@ export const Items=[
           Price: "28000",
           Image:
             "https://i.pinimg.com/564x/c8/b2/52/c8b2527f2cf5bf8190aa4309fee9685e.jpg",
-          type: "children",
+          type: "Kids",
           Qty: 1,
           Stock: 10,
         },
@@ -457,7 +457,7 @@ export const Items=[
           Price: "24000",
           Image:
             "https://i.pinimg.com/564x/6f/2e/ec/6f2eecea2a3cdeb2bde8674589d9a743.jpg",
-          type: "children",
+          type: "Kids",
           Qty: 1,
         },
       
@@ -467,7 +467,7 @@ export const Items=[
           Price: "3500",
           Image:
             "https://i.pinimg.com/564x/81/13/24/811324a663cc6dfa0317898a879d8675.jpg",
-          type: "children",
+          type: "Kids",
           Qty: 1,
           Stock: 10,
         },
@@ -478,7 +478,7 @@ export const Items=[
           Price: "2600",
           Image:
             "https://i.pinimg.com/564x/b8/2a/fb/b82afbec11a5862f8cf0b2fcd39f482c.jpg",
-          type: "children",
+          type: "Kids",
           Qty: 1,
           Stock: 10,
         },
@@ -533,7 +533,7 @@ export const Items=[
           Price: "20000",
           Image:
             "https://i.pinimg.com/564x/48/32/a3/4832a3786a7bf5a1b4f185cb8db41744.jpg",
-          type: "Sofa",
+          type: "Couches",
           Qty: 1,
           Stock: 10,
         },
@@ -544,7 +544,7 @@ export const Items=[
           Price: "29000",
           Image:
             "https://i.pinimg.com/564x/72/e8/d8/72e8d8031581160ccd2a16fcbbbedde3.jpg",
-          type: "Sofa",
+          type: "Couches",
           Qty: 1,
           Stock: 10,
         },
@@ -555,7 +555,7 @@ export const Items=[
           Price: "19000",
           Image:
             "https://i.pinimg.com/736x/39/1b/53/391b533f892f86b33cb985681ca9c1ba.jpg",
-          type: "Sofa",
+          type: "Couches",
           Qty: 1,
           Stock: 10,
         },
@@ -566,7 +566,7 @@ export const Items=[
           Price: "18000",
           Image:
             "https://i.pinimg.com/564x/ef/4d/0c/ef4d0cec573307983e2f000b178d5c22.jpg",
-          type: "Sofa",
+          type: "Couches",
           Qty: 1,
           Stock: 10,
         },
@@ -576,7 +576,7 @@ export const Items=[
           Price: "18000",
           Image:
             "https://i.pinimg.com/564x/c5/c2/37/c5c23760fd1d9a84ea72a98f7f4065a2.jpg",
-          type: "Sofa",
+          type: "Couches",
           Qty: 1,
           Stock: 10,
         },
@@ -586,7 +586,7 @@ export const Items=[
           Price: "28099",
           Image:
             "https://i.pinimg.com/564x/cd/66/c7/cd66c7bba2a9fc6ec22bfe93ede158d3.jpg",
-          type: "Light",
+          type: "Lights",
           Qty: 1,
           Stock: 10,
         },
@@ -597,7 +597,7 @@ export const Items=[
           Price: "1999",
           Image:
             "https://i.pinimg.com/474x/d8/20/cf/d820cff327e922e4cfae64a2460d67cd.jpg",
-          type: "Light",
+          type: "Lights",
           Qty: 1,
           Stock: 10,
         },

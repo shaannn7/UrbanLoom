@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
-import { useNavigate } from "react-router-dom";
-import NavBar from "../Home/NavBar/Nav";
 import { Link } from "react-router-dom";
 import './Login.css'
 
 
 const Login = ({ Loguser }) => {
+  
   const [luser, setluser] = useState({})
 
   return (

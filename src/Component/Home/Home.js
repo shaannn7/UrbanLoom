@@ -99,10 +99,10 @@ const Home = () => {
             <p className='fontstyle'>Kids</p>
           </div>
           <div className='col-6'>
-            <Link to={'/Entertainment'}>
+            <Link to={'/Shop'}>
               <Image src={require('./HomeCatgry/Entertainment.jpg')} style={{ width: "100%" }} />
             </Link>
-            <p className='fontstyle'>Entertainment</p>
+            <p className='fontstyle'>Others</p>
           </div>
         </div>
       </div>

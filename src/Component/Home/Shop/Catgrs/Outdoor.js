@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
-import { Items } from '../../../Items';
 import { Button } from 'react-bootstrap';
-import Modal from 'react-bootstrap/Modal';
+import { Mycontext } from '../../../../App';
+
 
 const Outdoor = ({ nav }) => {
-    const [items, setItems] = useState(Items)
-    const OutdoorItems = items.filter((item) => item.type === 'Outdoor');
+    const {item , setItem} = useContext(Mycontext)
+    const OutdoorItems = item.filter((item) => item.type === 'Outdoor');
 return (
         <div>
             <h3 style={{ color: "silver" }}>OUTDOOR</h3>

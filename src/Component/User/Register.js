@@ -1,6 +1,5 @@
 import Button from "react-bootstrap/Button";
-import { Link, useNavigate } from "react-router-dom";
-import NavBar from "../Home/NavBar/Nav";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./Register.css"
 

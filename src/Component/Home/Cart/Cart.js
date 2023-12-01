@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
@@ -30,17 +30,11 @@ const Cart = ({ cart, setCart, ifLogin ,Loguser , Buynow}) => {
 
 
     const QtyCountdec = (id) => {
-        const newItem = cart.map((x) => {
-            if (x.Id === id) {
-                const newQty = Math.max(1, x.Qty - 1);
-                return { ...x, Qty: newQty, Total: newQty * x.Price };
-            } else {
-                return x;
-            }
-        });
-
+        const newItem = cart.map((x) =>x.Id === id ? { ...x, Qty: Math.max(1, x.Qty - 1), Total: Math.max(1, x.Qty - 1) * x.Price } : x
+        );
         setCart(newItem);
     };
+
 
 
 

@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState , useContext} from 'react'
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
-import { Items } from '../../../Items';
 import { Button } from 'react-bootstrap';
-
+import { Mycontext } from '../../../../App';
 
 const Storage = ({nav}) => {
-    const [items, setItems] = useState(Items)
-    const StorageItems = items.filter((item) => item.type === 'Storage');
+    const {item , setItem} = useContext(Mycontext)
+    const StorageItems = item.filter((item) => item.type === 'Storage');
 return (
         <div>
             <h3 style={{ color: "silver" }}>STORAGE</h3>

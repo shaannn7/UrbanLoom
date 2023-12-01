@@ -7,7 +7,14 @@ import Table from 'react-bootstrap/Table';
 
 
 
-const Payment = ({buyitem ,buytot }) => {
+const Payment = ({buyitem ,buytot , valUser, setvalUser , Loguser}) => {
+
+  
+     const Placeorder = ()=>{
+        const Finduser = valUser.map((user)=> user.email === Loguser.email ? {...user , order:buyitem } : user)
+        setvalUser(Finduser)
+     }
+
    
     return (
         <div>
@@ -34,15 +41,15 @@ const Payment = ({buyitem ,buytot }) => {
                             </tr>
                         ))}
                         <tr>
-                            <td colSpan={3} style={{ backgroundColor: "sienna", color: "white" }}><h5>GRAND TOTAL :</h5></td>
-                            <td style={{ backgroundColor: "sienna", color: "white" }}>{buytot}₹</td>
+                            <td colSpan={4} style={{ backgroundColor: "sienna", color: "white" }}><h5>GRAND TOTAL        :</h5></td>
+                            <td style={{ backgroundColor: "white", color: "sienna" , fontSize:"larger", fontWeight:"600" }}>{buytot} ₹</td>
                         </tr>
                     </tbody>
 
-                </Table><br /><br /><br />
+                </Table><br />
                 <h3 style={{ color: "grey" }}>ADDRESS</h3><br />
                 <div className="border border-2 border-secondary" style={{backgroundColor:"lightgrey"}}>
-                    <Row >
+                    <Row className='mt-4'>
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Email</Form.Label>
                             <Form.Control type="email" placeholder="Enter email" />
@@ -81,7 +88,7 @@ const Payment = ({buyitem ,buytot }) => {
                             <Form.Control />
                         </Form.Group>
                     </Row><br/>
-                    <Button  variant='secondary'>
+                    <Button onClick={Placeorder}  variant='secondary'>
                         PROCEED PAYMENT
                     </Button><br/><br/><br/>
                 </div>

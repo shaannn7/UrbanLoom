@@ -4,18 +4,16 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import { Button } from 'react-bootstrap';
 import { Mycontext } from '../../../../App';
 
-
-const Kids = ({ nav }) => {
+const Mirrors = ({ nav }) => {
     const {item , setItem} = useContext(Mycontext)
-    const KidstItems = item.filter((item) => item.type === 'Kids');
-
+    const Mirroritems = item.filter((item) => item.type === 'Mirrors');
 return (
         <div>
-            <h3 style={{ color: "silver" }}>KIDS</h3>
+            <h3 style={{ color: "silver" }}>MIRRORS</h3>
             <div className='container'>
                 <div className='row'>
                     {
-                        KidstItems.map((item) => (
+                        Mirroritems.map((item) => (
                             <CardGroup className='col-6 col-md-3'>
                                 <Card className='m-2 mt-4 md-3'>
                                     <Card.Img style={{ maxHeight: "12rem" }} src={item.Image} />
@@ -35,4 +33,4 @@ return (
     )
 }
 
-export default Kids
+export default Mirrors
