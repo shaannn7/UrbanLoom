@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/UrbanLoom/static/css/main.26366933.css",
+    "main.js": "/UrbanLoom/static/js/main.d5c21020.js",
+    "static/js/787.a034523b.chunk.js": "/UrbanLoom/static/js/787.a034523b.chunk.js",
+    "static/media/Entertainment.jpg": "/UrbanLoom/static/media/Entertainment.f64a8682b75e4676b36b.jpg",
+    "static/media/Miniimal.jpg": "/UrbanLoom/static/media/Miniimal.833caa4330d415a99623.jpg",
+    "static/media/Kids.jpg": "/UrbanLoom/static/media/Kids.f9ef03abb0f7d35f8124.jpg",
+    "static/media/LuxUrb.jpg": "/UrbanLoom/static/media/LuxUrb.c98240e018f1cf746207.jpg",
+    "static/media/Storage.jpg": "/UrbanLoom/static/media/Storage.96278ce1c1ad4a538ad9.jpg",
+    "static/media/Office.jpg": "/UrbanLoom/static/media/Office.d8d0b679e176a1fd42d2.jpg",
+    "static/media/Dinning.jpg": "/UrbanLoom/static/media/Dinning.814c44c4ae7b9c57ea0b.jpg",
+    "static/media/Outdoor.jpg": "/UrbanLoom/static/media/Outdoor.ed40f0d342c3f23d2a79.jpg",
+    "static/media/modern.jpg": "/UrbanLoom/static/media/modern.5b6ec3427ff5009c7687.jpg",
+    "static/media/SeatingFurniture.jpg": "/UrbanLoom/static/media/SeatingFurniture.babe48b7d81d1c9b24e8.jpg",
+    "static/media/Bedroom.jpg": "/UrbanLoom/static/media/Bedroom.1530331ae69b945681ba.jpg",
+    "static/media/LogoF.png": "/UrbanLoom/static/media/LogoF.e8d22736b2af7a9d0d12.png",
+    "index.html": "/UrbanLoom/index.html",
+    "main.26366933.css.map": "/UrbanLoom/static/css/main.26366933.css.map",
+    "main.d5c21020.js.map": "/UrbanLoom/static/js/main.d5c21020.js.map",
+    "787.a034523b.chunk.js.map": "/UrbanLoom/static/js/787.a034523b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26366933.css",
+    "static/js/main.d5c21020.js"
+  ]
+}
