@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/UrbanLoom/static/css/main.26366933.css",
-    "main.js": "/UrbanLoom/static/js/main.d5c21020.js",
+    "main.js": "/UrbanLoom/static/js/main.07fc5547.js",
     "static/js/787.a034523b.chunk.js": "/UrbanLoom/static/js/787.a034523b.chunk.js",
     "static/media/Entertainment.jpg": "/UrbanLoom/static/media/Entertainment.f64a8682b75e4676b36b.jpg",
     "static/media/Miniimal.jpg": "/UrbanLoom/static/media/Miniimal.833caa4330d415a99623.jpg",
@@ -17,11 +17,11 @@
     "static/media/LogoF.png": "/UrbanLoom/static/media/LogoF.e8d22736b2af7a9d0d12.png",
     "index.html": "/UrbanLoom/index.html",
     "main.26366933.css.map": "/UrbanLoom/static/css/main.26366933.css.map",
-    "main.d5c21020.js.map": "/UrbanLoom/static/js/main.d5c21020.js.map",
+    "main.07fc5547.js.map": "/UrbanLoom/static/js/main.07fc5547.js.map",
     "787.a034523b.chunk.js.map": "/UrbanLoom/static/js/787.a034523b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.26366933.css",
-    "static/js/main.d5c21020.js"
+    "static/js/main.07fc5547.js"
   ]
 }
