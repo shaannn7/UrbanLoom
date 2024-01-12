@@ -88,7 +88,6 @@ function App() {
 
 
   const [ifLogin, setifLogin] = useState(false)
-
   const [loguser, setloguser] = useState({ cart : []})
   const Loguser = (email, password) => {
     const findUser = valUser.find((x) => x.email === email && x.password === password)

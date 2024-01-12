@@ -7,9 +7,6 @@ import { Mycontext } from '../../../App';
 
 const Shop = ({ nav}) => {
     const {item , setItem} = useContext(Mycontext)
-
-
-
     return (
         <div>
             <h3 style={{ color: "silver" }}>SHOP</h3>
